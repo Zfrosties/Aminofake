@@ -6,14 +6,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
 
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
 
-=======
->>>>>>> 7d981623aa1c7318d069dab3c41a0ee9236d5270
 import { FactComponent } from './fact/fact.component';
 import { NavComponent } from './nav/nav.component';
 import { SubmitFactComponent } from './submit-fact/submit-fact.component';
@@ -37,11 +34,8 @@ import { PostComponent } from './post/post.component';
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
     FormsModule, 
     HttpModule,
-=======
->>>>>>> 7d981623aa1c7318d069dab3c41a0ee9236d5270
     RouterModule.forRoot([
       {
         path: '' ,
