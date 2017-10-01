@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FactComponent implements OnInit {
 
-  facts;
+  facts=[];
 
   constructor(private fService : FactService) {}
 
   ngOnInit() {
-    this.facts= this.fService.getFacts();
+    this.fService.getAll()
+      .subscribe(rep =>{
+        this.facts = rep;
+    })
   }
 
 
