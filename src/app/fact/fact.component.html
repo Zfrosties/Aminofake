@@ -1,5 +1,7 @@
 <app-post *ngFor="let fact of facts"
+[id]="fact.id"
 [title]="fact.title"
 [content]="fact.content"
 [validated]="fact.validated"
-[fake]="fact.fake"></app-post>
+[fake]="fact.fake"
+(onValidate)="validate($event)"></app-post>

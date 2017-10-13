@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -11,7 +11,10 @@ export class PostComponent implements OnInit {
   @Input() content = "";
   @Input() validated = false;
   @Input() fake = undefined;
+  @Input() id = 0;
 
+  @Output() onValidate = new EventEmitter();
+  
   constructor() { }
 
   ngOnInit() {
@@ -21,11 +24,13 @@ export class PostComponent implements OnInit {
   onFake(){
     this.fake = true
     this.validated = true
+    this.onValidate.emit({id: this.id,fake: this.fake, validated:this.validated});
   }
     
   onLegit(){
     this.fake = false
     this.validated = true
+    this.onValidate.emit({id: this.id, fake: this.fake, validated:this.validated});
   }
 
 }

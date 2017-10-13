@@ -19,6 +19,11 @@ export class FactComponent implements OnInit {
     })
   }
 
+  validate(updatedFact){
+    this.fService.update(updatedFact)
+      .subscribe(x =>console.log(x));
+  }
+
 
 
 }

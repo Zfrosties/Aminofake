@@ -1,3 +1,5 @@
+import { FactService } from './../fact.service';
+import {FormControl, FormGroup,Validators, FormBuilder} from '@angular/forms'
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubmitFactComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup
+
+  constructor(private fService : FactService, fb: FormBuilder) {
+    this.form = fb.group({
+      title:['',Validators.required],
+      content:['',Validators.required]
+    })
+
+  }
+
+
 
   ngOnInit() {
   }
 
-
+  createFact(){
+    this.fService.create(this.form.value)
+      .subscribe(this.form.value)
+  }
 
 }
