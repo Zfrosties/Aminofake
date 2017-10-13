@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class FactService extends DataService {
 
   constructor(http: Http) {
-      super('http://localhost:59753/api/values',http)
+      super('http://localhost:59753/api/facts',http)
    }
 
 }
