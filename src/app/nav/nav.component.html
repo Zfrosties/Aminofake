@@ -1,12 +1,43 @@
-<nav>
-    <div class="nav-wrapper  light-blue darken-4">
+<!-- <nav>
       <a href="#" class="brand-logo">AF</a>
       
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a [routerLink]="['/']">Home</a></li>
+        <li><a class="mat-button" [routerLink]="['/']">Home</a></li>
         <li><a [routerLink]="['/facts']">Look facts</a></li>
         <li><a [routerLink]="['/submit-fact']">Submit a fact</a></li>
         <li><a [routerLink]="['/about-us']">About Us</a></li>
       </ul>
-    </div>
   </nav>
+  <mat-checkbox>Bonjour</mat-checkbox> -->
+
+  <nav class="transparent">
+    <div class="row">
+      <div class="col s2">
+          <a href="#" [routerLink]="['/']" class="brand-logo">AminoFake</a>
+      </div>
+      <div class="col s6">
+          <a class="input-field ">
+              <i class="search material-icons prefix">search</i>
+              <input id="icon_telephone" autogrow type="text" placeholder="chercher une mythe" class="validate">
+          </a>
+      </div>
+      <div class="col s4 right">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="add">
+                  <a href="#" class="aAdd">
+                      <i (click)="displayDropDownMenu($event)" displayChild class="addIcon material-icons">add
+                            <div #child class="dropDownMenu collection">
+                                    <a href="#!" class="collection-item">AminoFact</a>
+                                    <a href="#!" class="collection-item">Khalid's tips</a>
+                                    <a href="#!" class="collection-item">Sitil stories</a>
+                            </div>
+                      </i>
+                    </a>
+                </li>
+              <li><a href="#">S'inscrire</a></li>
+              <li><a href="#">Se connecter</a></li>
+            </ul>
+      </div>
+    </div>    
+  </nav>
+

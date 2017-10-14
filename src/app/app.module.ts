@@ -20,6 +20,16 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { PostComponent } from './post/post.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatCheckboxModule} from '@angular/material';
+import {MatButtonModule} from '@angular/material';
+import {MatIconModule} from '@angular/material';
+import { AutogrowDirective } from './autogrow.directive';
+import {MatListModule} from '@angular/material';
+import { AddIconComponent } from './add-icon/add-icon.component';
+import { DisplayChildDirective } from './display-child.directive';
+
 
 @NgModule({
   declarations: [
@@ -30,13 +40,21 @@ import { PostComponent } from './post/post.component';
     HomeComponent,
     AboutUsComponent,
     NotFoundComponent,
-    PostComponent
+    PostComponent,
+    AutogrowDirective,
+    AddIconComponent,
+    DisplayChildDirective
   ],
   imports: [
     BrowserModule,
     FormsModule, 
     HttpModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
     RouterModule.forRoot([
       {
         path: '' ,

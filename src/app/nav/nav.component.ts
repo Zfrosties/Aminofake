@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,6 +11,11 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  displayDropDownMenu(e){
+    e.target.firstElementChild.addClass="none";
+    console.log(e.target.firstElementChild)
   }
 
 }
