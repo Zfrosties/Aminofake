@@ -13,9 +13,5 @@ export class NavComponent implements OnInit {
   ngOnInit() {
   }
 
-  displayDropDownMenu(e){
-    e.target.firstElementChild.addClass="none";
-    console.log(e.target.firstElementChild)
-  }
 
 }

@@ -27,8 +27,13 @@ a{
 }
 .dropDownMenu{
     position: absolute;
-    top:15px;
-    left:-200px;
+    top:10px;
+    left:-190px;
     width:200px;
 }
 
+.collection-item{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color:black;
+}
