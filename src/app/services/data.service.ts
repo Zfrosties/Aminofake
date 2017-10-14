@@ -1,7 +1,7 @@
 import { BadInput } from './../common/bad-input';
 import { NotFoundError } from './../common/not-found-error';
 import { AppError } from './../common/app-error';
-import { Http } from '@angular/http';
+import { Http,Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -11,8 +11,11 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class DataService {
-  constructor(private url: string, private http: Http) { }
 
+  private headers = new Headers({'Content-Type': 'application/json'});
+
+  constructor(private url: string, private http: Http) { }
+  
   getAll() {
     return this.http.get(this.url)
       .map(response => response.json())
@@ -26,13 +29,13 @@ export class DataService {
   }
 
   create(resource) {
-    return this.http.post(this.url, JSON.stringify(resource))
+    return this.http.post(this.url, JSON.stringify(resource),{headers: this.headers})
       .map(response => response.json())
       .catch(this.handleError);
   }
 
   update(resource) {
-    return this.http.patch(this.url + '/' + resource.id, JSON.stringify({ isRead: true }))
+    return this.http.patch(this.url + '/' + resource.id, JSON.stringify(resource),{headers: this.headers})
       .map(response => response.json())      
       .catch(this.handleError);
   }
@@ -53,4 +56,6 @@ export class DataService {
     
     return Observable.throw(new AppError(error));
   }
+
+
 }

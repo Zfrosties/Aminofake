@@ -63,7 +63,7 @@ import { PostComponent } from './post/post.component';
   providers: [
     FactService,
     DataService,
-    { provide: ErrorHandler, useClass: AppErrorHandler}  //on dis a angular quand tu utilise ErrorHandler utilise AppErrorHandler
+    //{ provide: ErrorHandler, useClass: AppErrorHandler}  //on dis a angular quand tu utilise ErrorHandler utilise AppErrorHandler
   ],
   bootstrap: [AppComponent]
 })

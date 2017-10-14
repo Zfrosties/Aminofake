@@ -25,8 +25,8 @@ export class SubmitFactComponent implements OnInit {
   }
 
   createFact(){
-    this.fService.create(this.form.value)
-      .subscribe(this.form.value)
+    this.fService.create({title:"rij",content:"ergerg"})
+      .subscribe()
   }
 
 }
