@@ -1,7 +1,9 @@
-<app-post *ngFor="let fact of facts"
-[id]="fact.id"
-[title]="fact.title"
-[content]="fact.content"
-[validated]="fact.validated"
-[fake]="fact.fake"
-(onValidate)="validate($event)"></app-post>
+<div class="row">
+        <app-post *ngFor="let fact of facts"
+        [id]="fact.id"
+        [title]="fact.title"
+        [content]="fact.content"
+        [validated]="fact.validated"
+        [fake]="fact.fake"
+        (onValidate)="validate($event)"></app-post>    
+</div>

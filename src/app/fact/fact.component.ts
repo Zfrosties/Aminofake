@@ -13,10 +13,7 @@ export class FactComponent implements OnInit {
   constructor(private fService : FactService) {}
 
   ngOnInit() {
-    this.fService.getAll()
-      .subscribe(rep =>{
-        this.facts = rep;
-    })
+    this.facts =this.fService.getFacts()
   }
 
   validate(updatedFact){

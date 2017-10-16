@@ -1,12 +1,13 @@
-<div class="card"  [ngClass]="validated ? fake ? 'red darken-4' : 'teal darken-3' : 'grey darken-4'">
-  <div class="card-content white-text">
-    <i *ngIf="fake && fake!=undefined" class="material-icons left">do_not_disturb</i>
-    <i *ngIf="!fake && fake!=undefined" class="material-icons left">check</i>
+<div class="card col s4">
+  <div class="card-content black-text">
+      <img src="http://via.placeholder.com/50/50" alt="">
     <span class="card-title">{{title}}</span>
+    
     <p>{{content}}</p>
   </div>
   <div class="card-action">
-    <button (click)="onFake()" class="waves-effect waves-light btn red darken-4" [ngClass]="validated ? 'disabled' : ''" href="#">Fake!</button>
-    <button (click)="onLegit()" class="waves-effect waves-light btn teal darken-3" [ngClass]="validated ? 'disabled' : ''" href="#">Oh legit!</button>
+    <button (click)="onFake()" class="btn indigo" [ngClass]="validated ? 'disabled' : ''" href="#">Fake!</button>
+    <button (click)="onLegit()" class="btn indigo lighten-3" [ngClass]="validated ? 'disabled' : ''" href="#">Oh legit!</button>
   </div>
+  
 </div>

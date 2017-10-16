@@ -29,6 +29,9 @@ import { AutogrowDirective } from './autogrow.directive';
 import {MatListModule} from '@angular/material';
 import { AddIconComponent } from './add-icon/add-icon.component';
 import { DisplayChildDirective } from './display-child.directive';
+import {MatMenuModule} from '@angular/material';
+import {MatInputModule} from '@angular/material';
+import {MatCardModule} from '@angular/material';
 
 
 @NgModule({
@@ -54,6 +57,9 @@ import { DisplayChildDirective } from './display-child.directive';
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
+    MatCardModule,
+    MatInputModule,
     MatListModule,
     RouterModule.forRoot([
       {

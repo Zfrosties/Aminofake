@@ -3,7 +3,7 @@ import {Directive, ElementRef, Renderer, ViewChild} from '@angular/core'
 @Directive({
   selector:'[displayChild]',
   host:{
-      '(mouseover)': 'onMouseover()',
+      '(mouseover)': 'onMouseover($event.target)',
       '(mouseout)': 'onMouseout()'
   }
 })
@@ -17,15 +17,19 @@ export class DisplayChildDirective {
   }
 
   ngOnInit() {
-    this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'transition','0.3s');
+    //this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'transition','0.5s');
     this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'display','none')
+    this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'opacity','0')
   }
-  onMouseover(){
+  onMouseover(target){
       this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'display','');
-  }
-  onMouseout(){
-      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'display','none')
+      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'opacity','1');
+    }
+    onMouseout(){
+      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'display','none');
+      this.renderer.setElementStyle(this.el.nativeElement.querySelector('.dropDownMenu'),'opacity','0');
 
-  }
+    }
+
 
 }

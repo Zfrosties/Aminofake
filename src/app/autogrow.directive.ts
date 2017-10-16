@@ -14,7 +14,7 @@ export class AutogrowDirective {
     this.renderer.setElementStyle(this.el.nativeElement,'width','200px')
 }
 onFocus(){
-    this.renderer.setElementStyle(this.el.nativeElement,'width','50%');
+    this.renderer.setElementStyle(this.el.nativeElement,'width','100%');
 }
 onBlur(){
     this.renderer.setElementStyle(this.el.nativeElement,'width','200px')
