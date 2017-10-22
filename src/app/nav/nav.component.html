@@ -10,13 +10,20 @@
                 <input autogrow type="text" placeholder="chercher une mythe" class="validate">
         </div></li>
         <ul class="right">
-                <li><a href="#" class="add">
-                            <mat-icon displayChild class="plus">add
-                                    <div @fade class="collection dropDownMenu">
-                                            <a href="" class="collection-item">AminoFact</a>
-                                    </div>
-                            </mat-icon>
-                    </a>
+                <li>
+                        <app-dropdown-menu>
+                                <ng-container class="z-button">
+                                        <a href="#">
+                                        <mat-icon class="">add</mat-icon>
+                                        </a>
+                                </ng-container>
+                                        
+                                <ng-container  class="z-menu ">
+                                        <div class="collection dropDownMenu">
+                                        <a href="#" class="collection-item">AminoFact</a>
+                                        </div>
+                                </ng-container>
+                        </app-dropdown-menu>
                 </li>
                 <li><a  class="hide-on-med-and-down">Se connecter</a></li>
                 <li><a  class="hide-on-med-and-down">S'inscrire</a></li>

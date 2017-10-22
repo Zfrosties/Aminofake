@@ -1,3 +1,4 @@
+import { ClickOutsideDirective } from './clickOutside.directive';
 import { AppErrorHandler } from './common/app-error-handler';
 import { DataService } from './services/data.service';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -32,6 +33,7 @@ import { DisplayChildDirective } from './display-child.directive';
 import {MatMenuModule} from '@angular/material';
 import {MatInputModule} from '@angular/material';
 import {MatCardModule} from '@angular/material';
+import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import {MatCardModule} from '@angular/material';
     PostComponent,
     AutogrowDirective,
     AddIconComponent,
-    DisplayChildDirective
+    DisplayChildDirective,
+    DropdownMenuComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

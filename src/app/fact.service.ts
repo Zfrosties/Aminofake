@@ -29,8 +29,8 @@ export class FactService extends DataService {
         fake:false
       },
       {
-        title:"bonjour les amis",
-        content:"lorem ipsum",
+        title:"Karima aime Zaïd",
+        content:"Elle aime sentir les cheveux de Zaïd",
         validated:false,
         fake:false
       }

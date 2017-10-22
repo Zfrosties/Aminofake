@@ -1,0 +1,8 @@
+<span clickOutside (clickOutside)="autoClose()">
+    <span (click)="toggle()" class="button">
+            <ng-content   select=".z-button"></ng-content>    
+        </span>
+        <div *ngIf="showMenu" class="menu">
+            <ng-content select=".z-menu"></ng-content>    
+        </div>
+</span>

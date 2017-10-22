@@ -32,7 +32,7 @@ nav .input-field{
 
 .add:hover{
     background-color: rgba(0, 0, 0, 0);
-    border-bottom: 1px solid white
+    border-bottom: 1px solid rgba(22, 139, 52, 0.36)
 }
 .input-field input:focus {
     border-bottom: 1px solid white !important;
